@@ -1,0 +1,27 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+body{
+  background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.challenge-container{
+  padding-top: 2rem;
+}
+  
+.card {
+  background-color: transparent;
+  border: 8px solid antiquewhite;
+  display: inline-block;
+  margin: 1.5rem;
+  min-height: 15rem;
+  border-radius: 0%;
+}
+
+.card-body{
+  color: antiquewhite;
+}
+
+.card-body:hover{
+  text-decoration: none !important;
+}

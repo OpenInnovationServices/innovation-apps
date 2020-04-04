@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'inno-apps';
+  title = 'Innovation-Apps';
+
+  selectedValue: string = "";
+  items = [
+    { value: "0", view: "zero" },
+    { value: "1", view: "one" },
+    { value: "2", view: "Two" }
+  ];
 }

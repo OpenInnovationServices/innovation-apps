@@ -1,0 +1,48 @@
+<p>play-challenge works!</p>
+<div *ngIf="challenge">
+    <h2>{{challenge.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{challenge.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="challenge.name" placeholder="name"/>
+      </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+  </div>
+
+  <div class="example-container">
+    <h2>To do</h2>
+  
+    <div
+      cdkDropList
+      #todoList="cdkDropList"
+      [cdkDropListData]="todo"
+      [cdkDropListConnectedTo]="[comboList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div
+      cdkDropList
+      #comboList="cdkDropList"
+      [cdkDropListData]="solution"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of solution">{{item}}</div>
+    </div>
+  
+  <div class="example-container">
+    <h2>Done</h2>
+  
+    <div
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[comboList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    </div>
+  </div>
