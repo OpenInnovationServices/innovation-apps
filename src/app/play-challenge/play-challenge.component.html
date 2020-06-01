@@ -1,9 +1,11 @@
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <div class="container" *ngIf="challenge">
-
-  
     <!-- <h2>{{challenge | json}} </h2> -->
-    <div>{{challenge.name}}</div>
-    <div>{{challenge.instructions}}</div>
+    
+    <div class="row">
+      <div class="col-12"><p style="padding-left:1.2rem;font-size: 2.5rem;font-family: 'Open Sans', sans-serif;">{{challenge.name}}</p></div>
+      <div class="col-12"><p style="padding-left:1.2rem;font-size: 1.1rem;font-family: 'Open Sans', sans-serif;">{{challenge.instructions}}</p></div>
+    </div>
       
     <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
       
@@ -11,7 +13,7 @@
       <div class="col-md-5 col-sm-12 text-center">
 
         <div class="example-container">
-          <h2>{{itemGroup1.name}}</h2>
+          <p style="padding-left:0.8rem;font-size: 1.1rem;font-family: 'Open Sans', sans-serif;">{{itemGroup1.name}}</p>
           <div 
           cdkDropList 
           #group1List="cdkDropList" 
@@ -46,7 +48,7 @@
       <div class="col-md-5 col-sm-12 text-center">
 
         <div class="example-container">
-          <h2>{{itemGroup2.name}}</h2>
+          <p style="padding-left:0.8rem;font-size: 1.1rem;font-family: 'Open Sans', sans-serif;">{{itemGroup2.name}}</p>
           <div 
           cdkDropList 
           #group2List="cdkDropList" 
@@ -113,7 +115,7 @@
       </div>
     </form>
 
-    <button class="btn btn-primary btn-lg" (click)="goBack()">Go back</button>
+    <!-- <button class="btn btn-primary btn-lg" (click)="goBack()">Go back</button> -->
 
     
 
