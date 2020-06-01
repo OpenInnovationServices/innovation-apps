@@ -1,11 +1,11 @@
 {
   "/api/*": {
-   "target": "http://localhost:3000",
+   "target": "https://panda-node.herokuapp.com",
    "secure": false,
    "changeOrigin": true
   },
   "/__/*": {
-    "target": "http://localhost:3100",
+    "target": "https://panda-node.herokuapp.com",
     "secure": false,
     "changeOrigin": true
   }
