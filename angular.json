@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            // "outputPath": "../pandaNode/client/dist/inno-apps",
             "outputPath": "dist/inno-apps",
             "index": "src/index.html",
             "main": "src/main.ts",
