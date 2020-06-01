@@ -17,7 +17,7 @@ import { CHALLENGE_DATA } from './mock-challenges';
 export class ChallengesService {
   
   private challengesInfoUrl = 'https://panda-node.herokuapp.com/api/getChallenges/';  // URL to web api
-  private postChallengeDataUrl = 'http://panda-node.herokuapp.com/api/challenge/';
+  private postChallengeDataUrl = 'https://panda-node.herokuapp.com/api/challenge/';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
