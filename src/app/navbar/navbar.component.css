@@ -1,0 +1,11 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+.bg-custom{
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+}
+
+a.nav-link,.navbar-brand{
+    padding: 0.5rem 2.5rem !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    color: white !important;
+}

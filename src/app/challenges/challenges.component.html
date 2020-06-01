@@ -1,0 +1,20 @@
+<body>
+
+  <div class="container challenge-container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12 text-center " *ngFor="let challenge of challenges">
+
+        <div class="card">
+          <a routerLink="/play/{{challenge._id}}">
+            <div class="card-body">
+              <h5 class="card-title">{{challenge.name}}</h5>
+              <!-- <h6 class="card-subtitle mb-2 text-muted">{{challenge.id}}</h6> -->
+              <p class="card-text">{{challenge.about}}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
