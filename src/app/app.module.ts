@@ -12,6 +12,7 @@ import { ChallengesComponent } from './challenges/challenges.component';
 import { PlayChallengeComponent } from './play-challenge/play-challenge.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserAnimationsModule,
     MatSliderModule,
     FormsModule,
-    DragDropModule
+    DragDropModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

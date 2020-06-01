@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            // "outputPath": "../pandaNode/client/dist/inno-apps",
             "outputPath": "dist/inno-apps",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -93,6 +94,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bs-stepper/dist/css/bs-stepper.min.css",
               "src/styles.css"
             ],
             "scripts": []
