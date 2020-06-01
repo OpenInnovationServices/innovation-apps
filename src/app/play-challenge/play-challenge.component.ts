@@ -121,6 +121,8 @@ export class PlayChallengeComponent implements OnInit {
   // onSubmit(form: NgForm) {
   //   console.log(form);
   // }
+  showSuccessMsg: boolean = false;
+  showErrorMsg: boolean = false;
   onSubmit(form: NgForm) {
     this.submitChallengeData.mix = this.solution1[0];
     this.submitChallengeData.match = this.solution2[0];
@@ -130,10 +132,12 @@ export class PlayChallengeComponent implements OnInit {
     // console.log(this.submitChallengeData+"I am here")
     this.challengesService.postChallengeData(this.submitChallengeData)
     .subscribe(
-                        (res) => {
-                            console.log(res);
+                        (data) => {
+                            this.showSuccessMsg = true;
                         },
-                        err => console.log(err)
+                        err => {console.log(err);
+                          this.showErrorMsg = true;
+                        }
                     );
     // this.router.navigate(['/challenges']);
   }

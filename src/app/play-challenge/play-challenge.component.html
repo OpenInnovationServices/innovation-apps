@@ -6,7 +6,7 @@
     <div>{{challenge.instructions}}</div>
       
     <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
-
+      
       <div class="row">
       <div class="col-md-5 col-sm-12 text-center">
 
@@ -95,11 +95,27 @@
 
 
       <input type="submit" class="btn btn-success" value="Send">
+
+      <div class="row"  *ngIf="showSuccessMsg">
+        <div class="col-xs-12">
+          <p class="alert alert-success">
+              <strong>Your Challenge has been submitted successfully</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="row"  *ngIf="showErrorMsg">
+        <div class="col-12">
+          <p class="alert alert-danger">
+            <strong>Error submitting challenge!!</strong>
+          </p>
+        </div>
+      </div>
     </form>
 
     <button class="btn btn-primary btn-lg" (click)="goBack()">Go back</button>
 
-    {{submitChallengeData | json}}
+    
 
 </div>
 <!-- container end -->

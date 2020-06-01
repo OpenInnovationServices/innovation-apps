@@ -80,6 +80,17 @@ postChallengeData (submitChallenge: SubmitChallenge): Observable<SubmitChallenge
     );
 }
 
+getSubmittedData(): Observable<SubmitChallenge[]> {
+  // TODO: send the message _after_ fetching the heroes
+  // this.messageService.add('HeroService: fetched heroes');
+  // return of(CHALLENGES);
+  return this.http.get<SubmitChallenge[]>(this.postChallengeDataUrl)
+    .pipe(
+      tap(_ => this.log('fetched data')),
+      catchError(this.handleError<SubmitChallenge[]>('getChallenges', []))
+    );
+}
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.
