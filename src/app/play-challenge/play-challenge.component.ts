@@ -89,7 +89,7 @@ export class PlayChallengeComponent implements OnInit {
           this.group1.push(result.name);
         }
         for (let result of this.itemGroup2.itemSrc) {
-          this.group2.push(result.name);
+          this.group2.push(result);
         }
       });
 
@@ -125,11 +125,12 @@ export class PlayChallengeComponent implements OnInit {
   showErrorMsg: boolean = false;
   onSubmit(form: NgForm) {
     this.submitChallengeData.mix = this.solution1[0];
-    this.submitChallengeData.match = this.solution2[0];
+    this.submitChallengeData.match = this.solution2[0].src;
+    console.log(this.solution2[0].name);
     this.submitChallengeData.name = form.value.userName;
     this.submitChallengeData.idea = form.value.idea;
     this.submitChallengeData.code = form.value.code;
-    // console.log(this.submitChallengeData+"I am here")
+    console.log(this.submitChallengeData+"I am here")
     this.challengesService.postChallengeData(this.submitChallengeData)
     .subscribe(
                         (data) => {

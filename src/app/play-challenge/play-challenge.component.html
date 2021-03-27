@@ -1,125 +1,142 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-<div class="container" *ngIf="challenge">
-    <!-- <h2>{{challenge | json}} </h2> -->
-    
-    <div class="row">
-      <div class="col-12"><p style="padding-left:1.2rem;font-size: 2.5rem;font-family: 'Open Sans', sans-serif;">{{challenge.name}}</p></div>
-      <div class="col-12"><p style="padding-left:1.2rem;font-size: 1.1rem;font-family: 'Open Sans', sans-serif;">{{challenge.instructions}}</p></div>
+<div class="container-fluid" *ngIf="challenge">
+  <!-- <h2>{{challenge | json}} </h2> -->
+
+  <div class="row" style="background-color: #006986; color: white; margin-bottom: 2rem;">
+    <div class="col-md-3 col-sm-12 text-center">
+      <img src="{{challenge.name}}" style="height: 80px;" />
     </div>
-      
-    <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
-      
-      <div class="row">
-      <div class="col-md-5 col-sm-12 text-center">
+    <div class="col-md-9 col-sm-12 text-center">
+      <p
+        style="padding-left:1.2rem; padding-top: 10px;font-size: 1rem;font-family: 'Open Sans', sans-serif; font-weight: 900;">
+        {{challenge.instructions}}
+      </p>
+    </div>
+  </div>
+
+  <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+
+    <div class="row">
+      <div class="col-md-2 col-sm-12 text-center">
 
         <div class="example-container">
-          <p style="padding-left:0.8rem;font-size: 1.1rem;font-family: 'Open Sans', sans-serif;">{{itemGroup1.name}}</p>
-          <div 
-          cdkDropList 
-          #group1List="cdkDropList" 
-          [cdkDropListData]="group1" 
-          [cdkDropListConnectedTo]="[comboList1]"
-          class="example-list" 
-          (cdkDropListDropped)="drop($event)">
+          <!-- <p style="padding-left:0.8rem;font-size: 1.1rem;font-family: 'Open Sans', sans-serif;">{{itemGroup1.name}}</p> -->
+          <div cdkDropList #group1List="cdkDropList" [cdkDropListData]="group1" [cdkDropListConnectedTo]="[comboList1]"
+            class="example-list" (cdkDropListDropped)="drop($event)">
             <div class="example-box" *ngFor="let item of group1" cdkDrag>{{item}}</div>
           </div>
         </div>
-
-        <div class="example-container">
-          <h2>Mix...</h2>
-          <div 
-          cdkDropList 
-          #comboList1="cdkDropList" 
-          [cdkDropListData]="solution1"
-          [cdkDropListConnectedTo]="[group1List]" 
-          class="solution-list"
-          (cdkDropListDropped)="drop($event)" 
-          [cdkDropListEnterPredicate]="limiterPredicate">
-            <div class="example-box" *ngFor="let item of solution1" cdkDrag>{{item}}</div>
-          </div>
-        </div>
-
       </div>
 
-      <div class="col-md-2 col-sm-12 text-center">
-        <p style="font-size: 10rem;">+</p>
+      <div class="col-md-8 col-sm-12">
+        <div class="row" style="margin:15% auto;">
+          <div class="col-md-1 col-sm-12 text-center" style="position: relative;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="146" height="186" style="color: white;" fill="currentColor"
+              class="bi bi-arrow-right vertical-center right-arrow" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+
+          </div>
+          <div class="col-md-2 col-sm-12 text-center grp1-panel">
+            <div class="example-container vertical-center">
+              <div cdkDropList #comboList1="cdkDropList" [cdkDropListData]="solution1"
+                [cdkDropListConnectedTo]="[group1List]" class="solution-list" (cdkDropListDropped)="drop($event)"
+                [cdkDropListEnterPredicate]="limiterPredicate">
+                <div class="example-box" *ngFor="let item of solution1" cdkDrag>{{item}}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-12 text-center challenge-form">
+
+            <div class="form-group">
+              <!-- <label for="penName">Team Name / Pen Name:</label> -->
+              <input type="text" class="form-control" name="userName" placeholder="Team Name:" ngModel>
+            </div>
+
+            <div class="form-group">
+              <!-- <label for="penName">Code:</label> -->
+              <input type="text" class="form-control" name="code" placeholder="Crazy Combo Name:" ngModel>
+            </div>
+
+
+
+            <div class="form-group">
+              <!-- <label for="idea">Your Innovative Idea:</label> -->
+              <textarea class="form-control" rows="5" name="idea" placeholder="Crazy Combo Description:"
+                ngModel></textarea>
+            </div>
+
+            <input type="submit" class="btn btn-success btn-lg" value="SUBMIT">
+          </div>
+
+          <div class="col-md-2 col-sm-12 text-center" style="position: relative;">
+            <div class="example-container vertical-center">
+              <div cdkDropList #comboList2="cdkDropList" [cdkDropListData]="solution2"
+                [cdkDropListConnectedTo]="[group2List]" class="solution-list" (cdkDropListDropped)="drop($event)"
+                [cdkDropListEnterPredicate]="limiterPredicate">
+                <div class="example-box" *ngFor="let item of solution2" cdkDrag>
+                  <img src="{{item.src}}" style="max-width: 50px;" />
+                  <p style="font-size: 8px; margin: 0;">{{item.name}}</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-1 col-sm-12 text-center" style="position: relative;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="146" height="186" fill="currentColor" style="color: white;"
+              class="bi bi-arrow-left vertical-center left-arrow" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg>
+
+          </div>
+
+        </div>
       </div>
 
-      <div class="col-md-5 col-sm-12 text-center">
+      <div class="col-md-2 col-sm-12 text-center grp2-panel">
 
         <div class="example-container">
-          <p style="padding-left:0.8rem;font-size: 1.1rem;font-family: 'Open Sans', sans-serif;">{{itemGroup2.name}}</p>
-          <div 
-          cdkDropList 
-          #group2List="cdkDropList" 
-          [cdkDropListData]="group2" 
-          [cdkDropListConnectedTo]="[comboList2]"
-          class="example-list" 
-          (cdkDropListDropped)="drop($event)">
-            <div class="example-box" *ngFor="let item of group2" cdkDrag>{{item}}</div>
+          <!-- <p style="padding-left:0.8rem;font-size: 1.1rem;font-family: 'Open Sans', sans-serif;">{{itemGroup2.name}}</p> -->
+          <div cdkDropList #group2List="cdkDropList" [cdkDropListData]="group2" [cdkDropListConnectedTo]="[comboList2]"
+            class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of group2" cdkDrag>
+              <img src="{{item.src}}" style="max-width: 50px;" />
+              <p style="font-size: 8px; margin: 0;">{{item.name}}</p>
+            </div>
           </div>
         </div>
-
-        <div class="example-container">
-          <h2>and Match..</h2>
-          <div 
-          cdkDropList 
-          #comboList2="cdkDropList" 
-          [cdkDropListData]="solution2"
-          [cdkDropListConnectedTo]="[group2List]" 
-          class="solution-list"
-          (cdkDropListDropped)="drop($event)" 
-          [cdkDropListEnterPredicate]="limiterPredicate">
-            <div class="example-box" *ngFor="let item of solution2" cdkDrag>{{item}}</div>
-          </div>
-        </div>
-
       </div>
+
 
     </div>
     <!-- row end -->
 
-      <div class="form-group">
-        <label for="idea">Your Innovative Idea:</label>
-        <textarea class="form-control" rows="5" name="idea" placeholder="You Innovative Solution" ngModel></textarea>
+
+
+    <div class="row" *ngIf="showSuccessMsg">
+      <div class="col-xs-12">
+        <p class="alert alert-success">
+          <strong>Your Challenge has been submitted successfully</strong>
+        </p>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label for="penName">Team Name / Pen Name:</label>
-        <input type="text" class="form-control" name="userName" placeholder="You Pen Name" ngModel>
+    <div class="row" *ngIf="showErrorMsg">
+      <div class="col-12">
+        <p class="alert alert-danger">
+          <strong>Error submitting challenge!!</strong>
+        </p>
       </div>
+    </div>
+  </form>
 
-      <div class="form-group">
-        <label for="penName">Code:</label>
-        <input type="text" class="form-control" name="code" placeholder="Challenge Code" ngModel>
-      </div>
-
+  <!-- <button class="btn btn-primary btn-lg" (click)="goBack()">Go back</button> -->
 
 
-      <input type="submit" class="btn btn-success" value="Send">
-
-      <div class="row"  *ngIf="showSuccessMsg">
-        <div class="col-xs-12">
-          <p class="alert alert-success">
-              <strong>Your Challenge has been submitted successfully</strong>
-          </p>
-        </div>
-      </div>
-
-      <div class="row"  *ngIf="showErrorMsg">
-        <div class="col-12">
-          <p class="alert alert-danger">
-            <strong>Error submitting challenge!!</strong>
-          </p>
-        </div>
-      </div>
-    </form>
-
-    <!-- <button class="btn btn-primary btn-lg" (click)="goBack()">Go back</button> -->
-
-    
 
 </div>
 <!-- container end -->
-
-

@@ -52,7 +52,7 @@ export const CHALLENGE_DATA: ItemGroup[] = [{
   ]
 },
 {
-  id: 2,
+  id: 6,
   name: 'EMERGING_TECHNOLOGY',
   itemSrc: [
     { id: 1, name: 'Artificial Intelligence', src: 'assets/images/emergingTechnology/artificialIntelligence.png' },
@@ -83,14 +83,15 @@ export const CHALLENGE_DATA: ItemGroup[] = [{
 },
 {
   id: 4,
-  name: 'WASTE_MANAGEMENT_TOOLS',
+  name: 'EMERGING_TECHNOLOGIES',
   itemSrc: [
-    { id: 1, name: 'Reduce', src: 'assets/images/wasteManagementTools/reduce.png' },
-    { id: 2, name: 'Reuse', src: 'assets/images/wasteManagementTools/reuse.png' },
-    { id: 3, name: 'Repair', src: 'assets/images/wasteManagementTools/repair.png' },
-    { id: 4, name: 'Recycle', src: 'assets/images/wasteManagementTools/recycle.png' },
-    { id: 5, name: 'Reject', src: 'assets/images/wasteManagementTools/reject.png' },
-    { id: 6, name: 'Other', src: 'assets/images/wasteManagementTools/other.png' }
+    { id: 1, name: 'Virtual Reality', src: 'assets/images/crazyCombinationApp/vr-glasses.png' },
+    { id: 2, name: '3D-Printing', src: 'assets/images/crazyCombinationApp/3d-print.png' },
+    { id: 3, name: 'Drones', src: 'assets/images/crazyCombinationApp/drone.png' },
+    { id: 4, name: 'Artificial Intelligence', src: 'assets/images/crazyCombinationApp/ai.png' },
+    { id: 5, name: 'Mixed Reality', src: 'assets/images/crazyCombinationApp/big-data.png' },
+    { id: 6, name: 'Biometrics', src: 'assets/images/crazyCombinationApp/biometrics.png' },
+    { id: 7, name: 'Internet Of Things', src: 'assets/images/crazyCombinationApp/iot.png' }
   ]
 },
 {
@@ -106,6 +107,31 @@ export const CHALLENGE_DATA: ItemGroup[] = [{
     { id: 7, name: 'Ineffective Systems', src: 'assets/images/homeWorkingFrustations/ineffectiveSystems.png' },
     { id: 8, name: 'Unclear Roles', src: 'assets/images/homeWorkingFrustations/unclearRoles.png' },
     { id: 9, name: 'Unfair Expectations', src: 'assets/images/homeWorkingFrustations/unfairExpectations.png' }
+  ]
+},
+{
+  id: 2,
+  name: 'EVERYDAY_OBJECTS',
+  itemSrc: [
+    { id: 1, name: '✈️', src: 'assets/images/homeWorkingFrustations/disengagement.png' },
+    { id: 2, name: '📷', src: 'assets/images/homeWorkingFrustations/unsuitableLogistics.png' },
+    { id: 3, name: '💊', src: 'assets/images/homeWorkingFrustations/slowDecisionMaking.png' },
+    { id: 4, name: '🏠', src: 'assets/images/homeWorkingFrustations/poorCommunications.png' },
+    { id: 5, name: '🧠', src: 'assets/images/homeWorkingFrustations/lackOfCollaboration.png' },
+    { id: 6, name: '🎸', src: 'assets/images/homeWorkingFrustations/inefficientProcesses.png' },
+    { id: 7, name: '🍽️', src: 'assets/images/homeWorkingFrustations/ineffectiveSystems.png' },
+  ]
+},
+{
+  id: 4,
+  name: 'WASTE_MANAGEMENT_TOOLS',
+  itemSrc: [
+    { id: 1, name: 'Reduce', src: 'assets/images/wasteManagementTools/reduce.png' },
+    { id: 2, name: 'Reuse', src: 'assets/images/wasteManagementTools/reuse.png' },
+    { id: 3, name: 'Repair', src: 'assets/images/wasteManagementTools/repair.png' },
+    { id: 4, name: 'Recycle', src: 'assets/images/wasteManagementTools/recycle.png' },
+    { id: 5, name: 'Reject', src: 'assets/images/wasteManagementTools/reject.png' },
+    { id: 6, name: 'Other', src: 'assets/images/wasteManagementTools/other.png' }
   ]
 }
 ]

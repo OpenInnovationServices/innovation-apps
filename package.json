@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~9.0.7",
     "@angular/router": "~9.0.7",
     "bootstrap": "^4.4.1",
+    "bootstrap-icons": "^1.4.0",
     "bs-stepper": "^1.7.0",
     "express": "^4.17.1",
     "jquery": "^3.4.1",

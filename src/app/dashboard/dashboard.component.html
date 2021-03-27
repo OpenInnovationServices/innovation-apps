@@ -11,18 +11,18 @@
         <tr>
             <th>Mix</th>
             <th>Matched</th>
-            <th>Idea</th>
-            <th>Name/Pen Name</th>
-            <th>Code</th>
+            <th>Crazy Combo Name</th>
+            <th>Team Name</th>
+            <th>Crazy Combo Description</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let data of submittedData">
             <td>{{data.mix}}</td>
-            <td>{{data.match}}</td>
-            <td>{{data.idea}}</td>
-            <td>{{data.name}}</td>
+            <td><img src="{{data.match}}" style="max-width: 50px;"/></td>
             <td>{{data.code}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.idea}}</td>
         </tr>
     </tbody>
 </table>
