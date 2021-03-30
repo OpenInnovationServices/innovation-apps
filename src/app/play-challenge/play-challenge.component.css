@@ -6,7 +6,17 @@
 }
 
 .container-fluid{
-  background-color: #0292B7 !important;
+  /* background-color: #F6821D !important; */
+  height: 100%;
+  width: 100%;
+  background: #F6821D url('/assets/images/crazyCombinationApp/madScientist.png') no-repeat top left;
+}
+
+.madSci-image{
+  max-width: 100%;
+  height: 800px;
+  position: absolute;
+  top: -1%;
 }
 
 .example-list {
@@ -16,8 +26,16 @@
   overflow: hidden;
   display: block;
   width: 100px;
-  height: 500px;
+  height: 650px;
   margin: auto;
+}
+
+.sol-1-style{
+  box-shadow: -8px -8px grey;
+}
+
+.sol-2-style{
+  box-shadow: 8px 8px grey;
 }
 
 .solution-list {
@@ -42,7 +60,7 @@
   box-sizing: border-box;
   cursor: move;
   background: transparent;
-  font-size: 38px;
+  font-size: 46px;
   margin: 5px auto;
 }
 
@@ -87,8 +105,46 @@
 }
 
 .left-arrow{
-  left: -30%;
+  left: 0%;
 }
+
+.input-group-text{
+  background-color: white;
+  border-right: none;
+  font-weight: bolder;
+  color: black;
+  border-radius: 0px;
+  opacity: 0.9;
+}
+
+.input-style{
+  border-left: none;
+  border-radius: 0px;
+  opacity: 0.9;
+}
+
+.description-label-style{
+    text-align: left;
+    background-color: white;
+    padding: 5px 0 0 10px;
+    margin-bottom: 0px;
+    font-weight: bolder;
+  color: black;
+  opacity: 0.9;
+}
+
+textarea{
+  border-top: none;
+    border-radius: 0px;
+    border: none;
+    opacity: 0.9;
+}
+
+.form-group{
+  box-shadow: -3px 3px grey;
+  opacity: 0.9;
+}
+
 
 @media (max-width: 576px) { 
 
