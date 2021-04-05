@@ -118,7 +118,7 @@ getChallengeData(): void {
                             this.showSuccessMsg = true;
                             setTimeout(() => {
                               setTimeout(() => {
-                                this.router.navigateByUrl("/connectTheDots/Dashboard");
+                                this.router.navigateByUrl("/connectTheDots/dashboard");
                               });
                             }, 3400);
                         },

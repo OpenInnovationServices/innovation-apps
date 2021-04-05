@@ -13,9 +13,9 @@ const routes: Routes = [
   { path: 'index', component: IndexComponent },
   { path: 'challenges', component: ChallengesComponent },
   { path: 'crazyCombinations', component: PlayChallengeComponent },
-  { path: 'crazyCombinations/Dashboard', component: DashboardComponent },
+  { path: 'crazyCombinations/dashboard', component: DashboardComponent },
   { path: 'connectTheDots', component: CtdPlayChallengeComponent},
-  { path: 'connectTheDots/Dashboard', component: CtdDashboardComponent}
+  { path: 'connectTheDots/dashboard', component: CtdDashboardComponent}
 ];
 
 @NgModule({
