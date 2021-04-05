@@ -126,7 +126,6 @@ export class PlayChallengeComponent implements OnInit {
   onSubmit(form: NgForm) {
     this.submitChallengeData.mix = this.solution1[0];
     this.submitChallengeData.match = this.solution2[0].src;
-    console.log(this.solution2[0].name);
     this.submitChallengeData.penName = form.value.userName;
     this.submitChallengeData.idea = form.value.idea;
     this.submitChallengeData.ideaName = form.value.ideaName;
