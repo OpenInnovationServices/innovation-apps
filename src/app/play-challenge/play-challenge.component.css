@@ -19,6 +19,14 @@
     top: 11%;
 }
 
+.inst-para{
+  padding-left:1.2rem; padding-top: 10px;font-size: 1rem;font-family: 'Open Sans', sans-serif; font-weight: 900;
+}
+
+.nav-row{
+  background-color: #B85C0C; color: white; margin-bottom: 1rem; padding: 0 5rem;
+}
+
 .example-list {
   border: solid 1px #ccc;
   background: white;
@@ -156,7 +164,7 @@ textarea{
 
   .example-list {
     width: 100%;
-    height: 80px;
+    height: 170px;
   }
 
   .challenge-form{
@@ -169,5 +177,21 @@ textarea{
 
   .grp1-panel{
     margin: 2rem 0 1rem 0;
+  }
+
+  .nav-row{
+    padding: 0 1rem;
+  }
+
+  .inst-para{
+    padding: 0;
+  }
+
+  .madSci-image{
+    max-width: 1000px;
+    height: 600px;
+    top: 71%;
+    right: -90%;
+    display: none;
   }
 }
