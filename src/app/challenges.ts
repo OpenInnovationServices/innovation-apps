@@ -23,7 +23,8 @@ export interface ItemGroup {
 export interface SubmitChallenge {
   mix: string;
   match: string;
-  name: string;
-  idea: string;
+  penName: string;
+  ideaName: string;
+  idea: String;
   code: string;
 }

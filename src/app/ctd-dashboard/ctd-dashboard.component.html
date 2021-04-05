@@ -6,9 +6,9 @@
 </script>
 <body>
 <div class="container-fluid">
-    <div class="row text-center" style="background-color: #F6821D; color: white; margin-bottom: 1rem; padding: 0 5rem;">
+    <div class="row text-center" style="background-color: #0292B7; color: white; margin-bottom: 1rem; padding: 0 5rem;">
         <div class="col-12 text-center">
-            <img src="assets/images/crazyCombinationApp/crazyCombination.png" style="height: 80px;" />
+            <img src="assets/images/connectTheDots/ctd-logo.png" style="height: 80px;" />
         </div>
     </div>
     <div class="row text-center">
@@ -17,25 +17,25 @@
         </div>
         <div class="col-1"></div>
         <div class="col-10">
-            <table class="table">
+            <table class="table table-responsive">
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Team</th>
-                        <th>Object</th>
+                        <th>Activity</th>
                         <th>Tech</th>
-                        <th>Crazy Combo Name</th>
+                        <th>Name of Idea Name</th>
                         <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="6" style="border-left: none; border-right: none;"></td>
+                        <td colspan="6"></td>
                     </tr>
                     <tr *ngFor="let data of submittedData; let i =index; ">
                         <td>{{i+1}}</td>
                         <td>{{data.penName}}</td>
-                        <td>{{data.mix}}</td>
+                        <td><img src="{{data.mix}}" style="max-width: 50px;" /></td>
                         <td><img src="{{data.match}}" style="max-width: 50px;" /></td>
                         <td>{{data.ideaName}}</td>
                         <td>{{data.idea}}</td>

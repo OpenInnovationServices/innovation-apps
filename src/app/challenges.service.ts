@@ -16,8 +16,8 @@ import { CHALLENGE_DATA } from './mock-challenges';
 })
 export class ChallengesService {
   
-  private challengesInfoUrl = 'https://panda-node.herokuapp.com/api/getChallenges/';  // URL to web api
-  private postChallengeDataUrl = 'https://panda-node.herokuapp.com/api/challenge/';
+  private challengesInfoUrl = 'http://www.fergalbrophy.com/api/getChallenges/';  // URL to web api
+  private postChallengeDataUrl = 'http://www.fergalbrophy.com/api/challenge/';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -89,6 +89,17 @@ getSubmittedData(): Observable<SubmitChallenge[]> {
       tap(_ => this.log('fetched data')),
       catchError(this.handleError<SubmitChallenge[]>('getChallenges', []))
     );
+}
+
+getSubmittedDataWithCode(code: any): Observable<SubmitChallenge[]> {
+  // TODO: send the message _after_ fetching the hero
+  // this.messageService.add(`HeroService: fetched hero id=${id}`);
+  const url = `${this.postChallengeDataUrl}${code}`;
+  console.log(url);
+  return this.http.get<SubmitChallenge[]>(url).pipe(
+    tap(_ => this.log(`fetched hero id=${code}`)),
+    catchError(this.handleError<SubmitChallenge[]>(`challengesInfoUrl id=${code}`))
+  );
 }
 
   /**

@@ -110,28 +110,46 @@ export const CHALLENGE_DATA: ItemGroup[] = [{
   ]
 },
 {
-  id: 2,
+  id: 101,
   name: 'EVERYDAY_OBJECTS',
   itemSrc: [
-    { id: 1, name: '✈️', src: 'assets/images/homeWorkingFrustations/disengagement.png' },
-    { id: 2, name: '📷', src: 'assets/images/homeWorkingFrustations/unsuitableLogistics.png' },
-    { id: 3, name: '💊', src: 'assets/images/homeWorkingFrustations/slowDecisionMaking.png' },
-    { id: 4, name: '🏠', src: 'assets/images/homeWorkingFrustations/poorCommunications.png' },
-    { id: 5, name: '🧠', src: 'assets/images/homeWorkingFrustations/lackOfCollaboration.png' },
-    { id: 6, name: '🎸', src: 'assets/images/homeWorkingFrustations/inefficientProcesses.png' },
-    { id: 7, name: '🍽️', src: 'assets/images/homeWorkingFrustations/ineffectiveSystems.png' },
+    { id: 1, name: '🚗', src: 'assets/images/homeWorkingFrustations/disengagement.png' },
+    { id: 2, name: '🏠', src: 'assets/images/homeWorkingFrustations/unsuitableLogistics.png' },
+    { id: 3, name: '❤️', src: 'assets/images/homeWorkingFrustations/slowDecisionMaking.png' },
+    { id: 4, name: '🛒', src: 'assets/images/homeWorkingFrustations/poorCommunications.png' },
+    { id: 5, name: '🐕', src: 'assets/images/homeWorkingFrustations/lackOfCollaboration.png' },
+    { id: 6, name: '🎉', src: 'assets/images/homeWorkingFrustations/inefficientProcesses.png' },
+    { id: 7, name: '💊', src: 'assets/images/homeWorkingFrustations/ineffectiveSystems.png' },
+    { id: 8, name: '☀️', src: 'assets/images/homeWorkingFrustations/ineffectiveSystems.png' },
+    { id: 9, name: '🍲', src: 'assets/images/homeWorkingFrustations/ineffectiveSystems.png' },
   ]
 },
 {
-  id: 4,
-  name: 'WASTE_MANAGEMENT_TOOLS',
+  id: 102,
+  name: 'EMERGING_TECHNOLOGIES',
   itemSrc: [
-    { id: 1, name: 'Reduce', src: 'assets/images/wasteManagementTools/reduce.png' },
-    { id: 2, name: 'Reuse', src: 'assets/images/wasteManagementTools/reuse.png' },
-    { id: 3, name: 'Repair', src: 'assets/images/wasteManagementTools/repair.png' },
-    { id: 4, name: 'Recycle', src: 'assets/images/wasteManagementTools/recycle.png' },
-    { id: 5, name: 'Reject', src: 'assets/images/wasteManagementTools/reject.png' },
-    { id: 6, name: 'Other', src: 'assets/images/wasteManagementTools/other.png' }
+    { id: 1, name: 'Virtual Reality', src: 'assets/images/crazyCombinationApp/vr-glasses.png' },
+    { id: 2, name: '3D-Printing', src: 'assets/images/crazyCombinationApp/3d-print.png' },
+    { id: 3, name: 'Drones', src: 'assets/images/crazyCombinationApp/drone.png' },
+    { id: 4, name: 'Artificial Intelligence', src: 'assets/images/crazyCombinationApp/ai.png' },
+    { id: 5, name: 'Biometrics', src: 'assets/images/crazyCombinationApp/biometrics.png' },
+    { id: 6, name: 'Internet Of Things', src: 'assets/images/crazyCombinationApp/iot.png' },
+    { id: 7, name: 'Big Data', src: 'assets/images/crazyCombinationApp/bigData.png' },
+    { id: 8, name: 'Block Chain', src: 'assets/images/crazyCombinationApp/blockChain.png' }
+  ]
+},
+{
+  id: 103,
+  name: 'PRODUCT_SERVICES',
+  itemSrc: [
+    { id: 1, name: 'Products', src: 'assets/images/connectTheDots/products.png' },
+    { id: 2, name: 'Brand', src: 'assets/images/connectTheDots/brands.png' },
+    { id: 3, name: 'Operations', src: 'assets/images/connectTheDots/operations.png' },
+    { id: 4, name: 'Sales Processes', src: 'assets/images/connectTheDots/sales.png' },
+    { id: 5, name: 'Finance Processes', src: 'assets/images/connectTheDots/finance.png' },
+    { id: 6, name: 'HR Processes', src: 'assets/images/connectTheDots/hr.png' },
+    { id: 7, name: 'Procurement', src: 'assets/images/connectTheDots/procurement.png' },
+    { id: 8, name: 'Partnerships', src: 'assets/images/connectTheDots/partnership.png' }
   ]
 }
 ]

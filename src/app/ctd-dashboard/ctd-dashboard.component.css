@@ -1,22 +1,24 @@
-table {
-    border-collapse: collapse;
+table{
+    border-collapse: collapse; 
 }
 
 thead ,tr{
-    border: 10px solid #F6821D; 
+    border: 10px solid #0292B7; 
     margin-bottom: 20px;
 }
 
 thead{
-    color: #F6821D;
+    color: #0292B7;
 }
 
 h1{
-    color: #F6821D; font-size: 3rem; font-weight: 900; margin-bottom: 30px;
+    color: #0292B7; 
+    font-size: 3rem; 
+    font-weight: 900; 
 }
 
 th, td{
-    border: 8px solid #F6821D;
+    border: 5px solid #0292B7;
     border-radius: 25px;
     font-size: 1.2rem; 
     font-weight: 900; 

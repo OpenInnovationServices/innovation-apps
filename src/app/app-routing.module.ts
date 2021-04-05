@@ -3,15 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { ChallengesComponent } from './challenges/challenges.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PlayChallengeComponent } from './play-challenge/play-challenge.component'
+import { PlayChallengeComponent } from './play-challenge/play-challenge.component';
+import { CtdPlayChallengeComponent } from './ctd-play-challenge/ctd-play-challenge.component';
+import { CtdDashboardComponent } from './ctd-dashboard/ctd-dashboard.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: 'index', component: IndexComponent },
   { path: 'challenges', component: ChallengesComponent },
-  { path: 'play/:id', component: PlayChallengeComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'crazyCombinations', component: PlayChallengeComponent },
+  { path: 'crazyCombinations/Dashboard', component: DashboardComponent },
+  { path: 'connectTheDots', component: CtdPlayChallengeComponent},
+  { path: 'connectTheDots/Dashboard', component: CtdDashboardComponent}
 ];
 
 @NgModule({

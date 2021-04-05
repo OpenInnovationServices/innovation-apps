@@ -12,7 +12,9 @@ import { ChallengesComponent } from './challenges/challenges.component';
 import { PlayChallengeComponent } from './play-challenge/play-challenge.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { CtdPlayChallengeComponent } from './ctd-play-challenge/ctd-play-challenge.component';
+import { CtdDashboardComponent } from './ctd-dashboard/ctd-dashboard.component'; 
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     ChallengesComponent,
     PlayChallengeComponent,
     NavbarComponent,
+    CtdPlayChallengeComponent,
+    CtdDashboardComponent,
   ],
   imports: [
     BrowserModule,

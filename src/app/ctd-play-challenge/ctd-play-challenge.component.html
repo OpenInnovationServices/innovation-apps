@@ -2,10 +2,10 @@
 
 <div class="container-fluid" *ngIf="challenge">
   <!-- <h2>{{challenge | json}} </h2> -->
-  <img src="/assets/images/crazyCombinationApp/madScientist.png" class="madSci-image" />
-  <div class="row" style="background-color: #B85C0C; color: white; margin-bottom: 1rem; padding: 0 5rem;">
+  <img src="/assets/images/connectTheDots/ctd-bg.png" class="madSci-image" />
+  <div class="row" style="background-color: #006984; color: white; margin-bottom: 1rem; padding: 0 5rem;">
     <div class="col-md-3 col-sm-12 text-center">
-      <img src="{{challenge.name}}" style="height: 80px;" />
+      <img src="{{challenge.name}}" style="height: 70px;" />
     </div>
     <div class="col-md-9 col-sm-12 text-center">
       <p
@@ -42,7 +42,9 @@
           <!-- <p style="padding-left:0.8rem;font-size: 1.1rem;font-family: 'Open Sans', sans-serif;">{{itemGroup1.name}}</p> -->
           <div cdkDropList #group1List="cdkDropList" [cdkDropListData]="group1" [cdkDropListConnectedTo]="[comboList1]"
             class="example-list sol-1-style" (cdkDropListDropped)="drop($event)">
-            <div class="example-box" *ngFor="let item of group1" cdkDrag>{{item}}</div>
+            <div class="example-box" *ngFor="let item of group1" cdkDrag>
+              <img src="{{item.src}}" style="max-width: 50px;" />
+              <p style="font-size: 8px; margin: 0;">{{item.name}}</p></div>
           </div>
         </div>
       </div>
@@ -62,7 +64,10 @@
               <div cdkDropList #comboList1="cdkDropList" [cdkDropListData]="solution1"
                 [cdkDropListConnectedTo]="[group1List]" class="solution-list" (cdkDropListDropped)="drop($event)"
                 [cdkDropListEnterPredicate]="limiterPredicate">
-                <div class="example-box" *ngFor="let item of solution1" cdkDrag>{{item}}</div>
+                <div class="example-box" *ngFor="let item of solution1" cdkDrag>
+                  <img src="{{item.src}}" style="max-width: 50px;" />
+                  <p style="font-size: 8px; margin: 0;">{{item.name}}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -74,24 +79,24 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text">Team Name:</div>
                 </div>
-                <input type="text" class="form-control input-style" maxlength="30" name="userName" ngModel ng-required="true">
+                <input type="text" class="form-control input-style" name="userName" maxlength="30" ngModel>
               </div>                  
             </div>
 
             <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <div class="input-group-text">Crazy Combo Name:</div>
+                    <div class="input-group-text">Combo Name:</div>
                   </div>
-                  <input type="text" class="form-control input-style" maxlength="30" name="ideaName" ngModel required>
+                  <input type="text" class="form-control input-style" name="ideaName" maxlength="30" ngModel>
                 </div>              
             </div>
 
 
 
             <div class="form-group">
-              <p for="idea" class="description-label-style">Crazy Combo Description:</p>
-              <textarea class="form-control" rows="5" name="idea" maxlength="150" ngModel required></textarea>
+              <p for="idea" class="description-label-style">Combo Description:</p>
+              <textarea class="form-control" rows="5" name="idea" maxlength="150" ngModel></textarea>
             </div>
 
             <input type="submit" class="btn btn-success btn-lg" value="SUBMIT">
