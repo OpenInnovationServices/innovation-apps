@@ -61,7 +61,7 @@
               <div cdkDropList #comboList1="cdkDropList" [cdkDropListData]="solution1"
                 [cdkDropListConnectedTo]="[group1List]" class="solution-list" (cdkDropListDropped)="drop($event)"
                 [cdkDropListEnterPredicate]="limiterPredicate">
-                <div class="example-box" *ngFor="let item of solution1" cdkDrag>{{item}}</div>
+                <div class="example-box" style="margin-top: 7px;" *ngFor="let item of solution1" cdkDrag>{{item}}</div>
               </div>
             </div>
           </div>
