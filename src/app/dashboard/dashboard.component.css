@@ -23,6 +23,10 @@ th, td{
     margin-bottom: 30px;
 }
 
+.everyday-objects{
+    font-size: 40px !important;
+}
+
 td{
     font-size: 18px;
     font-weight: 900;

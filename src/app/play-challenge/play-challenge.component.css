@@ -1,3 +1,11 @@
+html {
+  min-height: 100%;
+  overflow-y: scroll;
+}    
+body {
+   min-height: 100%;
+}
+
 .example-container {
   width: 400px;
   max-width: 100%;
@@ -20,11 +28,11 @@
 }
 
 .inst-para{
-  padding-left:1.2rem; padding-top: 10px;font-size: 1rem;font-family: 'Open Sans', sans-serif; font-weight: 900;
+  padding-top: 10px;font-size: 1rem;font-family: 'Open Sans', sans-serif; font-weight: 900;
 }
 
 .nav-row{
-  background-color: #B85C0C; color: white; margin-bottom: 1rem; padding: 0 5rem;
+  background-color: #B85C0C; color: white; margin-bottom: 1rem; padding: 0 2rem;
 }
 
 .example-list {
@@ -68,6 +76,7 @@
   cursor: move;
   background: transparent;
   font-size: 46px;
+  padding: 0 10px;
 }
 
 .cdk-drag-preview {

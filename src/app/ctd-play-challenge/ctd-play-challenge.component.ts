@@ -63,8 +63,8 @@ getChallengeData(): void {
         console.log(this.challenge);
         const mix_code = this.challenge.mix_group;
         const match_code =this.challenge.match_group;
-        this.getGroup1Data(parseInt(mix_code))
-        this.getGroup2Data(parseInt(match_code))
+        this.getGroup1Data(parseInt(match_code))
+        this.getGroup2Data(parseInt(mix_code))
         for (let result of this.itemGroup1.itemSrc) {
           this.group1.push(result);
         }
