@@ -24,7 +24,7 @@
                         <th>Team</th>
                         <th>Activity</th>
                         <th>Tech</th>
-                        <th>Name of Idea Name</th>
+                        <th>Idea Name</th>
                         <th>Description</th>
                     </tr>
                 </thead>
@@ -35,8 +35,8 @@
                     <tr *ngFor="let data of submittedData; let i =index; ">
                         <td>{{i+1}}</td>
                         <td>{{data.penName}}</td>
-                        <td><img src="{{data.mix}}" style="max-width: 50px;" /></td>
                         <td><img src="{{data.match}}" style="max-width: 50px;" /></td>
+                        <td><img src="{{data.mix}}" style="max-width: 50px;" /></td>
                         <td>{{data.ideaName}}</td>
                         <td>{{data.idea}}</td>
                         <!-- <td>{{data.code}}</td> -->
