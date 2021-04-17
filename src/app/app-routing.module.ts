@@ -11,7 +11,7 @@ import { CtdDashboardComponent } from './ctd-dashboard/ctd-dashboard.component';
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: 'index', component: IndexComponent },
-  { path: 'challenges', component: ChallengesComponent },
+  // { path: 'challenges', component: ChallengesComponent },
   { path: 'crazyCombinations', component: PlayChallengeComponent },
   { path: 'crazyCombinations/dashboard', component: DashboardComponent },
   { path: 'connectTheDots', component: CtdPlayChallengeComponent},
