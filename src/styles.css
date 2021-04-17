@@ -1,8 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
-body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { height: 100%; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html  {
     overflow-x: hidden; 
+    min-height: 100vh
+}
+
+footer{
+    background-color: #005496;
+    padding: 1.8rem 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
+#footer-left-text{
+    padding-top: .8rem;
+    border-right: 2px solid white;
+}
+
+.footer-img{
+    height: 2rem;
+    width: auto;
+}
+
+.footer-icon{
+    height: 26px;
+}
+
+.footer-icon-phone{
+    height: 40px;
+}
+
+.mobile-footer{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-footer{
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    #footer-left-text{
+        text-align: center !important;
+        border-right: none;
+    }
+
+    #footer-right-text{
+        text-align: center !important;
+    }
+
+    .footer-text{
+        display: none;
+    }
+
+    .desktop-footer{
+        display: none;
+    }
+
+    .mobile-footer{
+        display: block;
+    }
+
+    #footer-left-text {
+        margin-top: -1.3rem!important;
+    }
 
 }
+
