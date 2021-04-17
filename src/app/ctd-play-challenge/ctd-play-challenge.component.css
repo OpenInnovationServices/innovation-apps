@@ -172,7 +172,7 @@ body {
   
     .example-list {
       width: 100%;
-      height: 170px;
+      height: 200px;
     }
   
     .challenge-form{
@@ -190,13 +190,17 @@ body {
     .madSci-image{
       max-width: 1000px;
       height: 600px;
-      top: 71%;
+      top: 91%;
       right: -90%;
       display: none;
     }
 
     .nav-row{
        padding: 0;
+    }
+
+    .example-box{
+      padding: 5px;
     }
   }
   
