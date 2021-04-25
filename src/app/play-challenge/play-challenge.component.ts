@@ -135,11 +135,6 @@ export class PlayChallengeComponent implements OnInit {
     .subscribe(
                         (data) => {
                             this.showSuccessMsg = true;
-                            setTimeout(() => {
-                              setTimeout(() => {
-                                this.router.navigateByUrl("/crazyCombinations/dashboard");
-                              });
-                            }, 3400);
                         },
                         err => {console.log(err);
                           this.showErrorMsg = true;

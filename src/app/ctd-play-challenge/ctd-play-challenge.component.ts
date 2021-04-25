@@ -116,11 +116,6 @@ getChallengeData(): void {
     .subscribe(
                         (data) => {
                             this.showSuccessMsg = true;
-                            setTimeout(() => {
-                              setTimeout(() => {
-                                this.router.navigateByUrl("/connectTheDots/dashboard");
-                              });
-                            }, 3400);
                         },
                         err => {console.log(err);
                           this.showErrorMsg = true;
