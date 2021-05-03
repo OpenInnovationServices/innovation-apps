@@ -158,6 +158,14 @@ body {
     box-shadow: -3px 3px grey;
     opacity: 0.9;
   }
+
+  .up-arrow{
+    display: none;
+  }
+  
+  .down-arrow{
+    display: none;
+  }
   
   
   @media (max-width: 576px) { 
@@ -200,6 +208,14 @@ body {
 
     .example-box{
       padding: 5px;
+    }
+
+    .up-arrow{
+      display: block;
+    }
+  
+    .down-arrow{
+      display: block;
     }
   }
   

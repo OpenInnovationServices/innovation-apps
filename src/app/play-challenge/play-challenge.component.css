@@ -160,6 +160,14 @@ textarea{
   opacity: 0.9;
 }
 
+.up-arrow{
+  display: none;
+}
+
+.down-arrow{
+  display: none;
+}
+
 
 @media (max-width: 576px) { 
 
@@ -199,7 +207,15 @@ textarea{
   .madSci-image{
     max-width: 1000px;
     height: 400px;
-    top: 71%;
+    top: 100%;
     right: -70%;
+  }
+
+  .up-arrow{
+    display: block;
+  }
+
+  .down-arrow{
+    display: block;
   }
 }
